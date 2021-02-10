@@ -17,7 +17,7 @@ export default class Dropdown extends Component {
         const dropdownList = keyArray.map(listItem => <option value={listItem} key={listItem}> {listItem}</option>)
         return (
             <div>
-                <label for={keyNameVar}>Filter by {keyNameVar}: </label>
+                <label for={keyNameVar}>Filter by <span className="orange">{keyNameVar}</span>: </label>
                 <select
                     id={keyNameVar}
                     onChange={this.props.handleChange}>
