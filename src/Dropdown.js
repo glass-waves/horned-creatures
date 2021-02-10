@@ -11,11 +11,16 @@ export default class Dropdown extends Component {
 
         const dropdownList = keyArray.map(listItem => <option value={listItem} key={listItem}> {listItem}</option>)
         return (
-            <select 
-            onChange = {this.props.handleChange}>
-                <option value=''>Filter by {keyNameVar}</option>
-                {dropdownList}
-            </select>
+            <div>
+                <label for={keyNameVar}>Filter by {keyNameVar}</label>
+                <select
+                    id={keyNameVar}
+                    onChange={this.props.handleChange}>
+                    <option value=''>None</option>
+                    {dropdownList}
+                </select>
+            </div>
+
         )
     }
 
