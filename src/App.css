@@ -31,8 +31,8 @@ form {
 }
 .imageItem {
   border: #F87060 solid 4px;
-  width: 150px;
-  height: 240px;
+  width: 145px;
+  height: 220px;
   text-align: center;
   margin: 5px;
   display: flex;
@@ -42,11 +42,46 @@ form {
   padding-bottom: 15px;;
   background-color: #CDD7D6;
   border-radius: 10px;
+  position: absolute;
+  animation: MoveUpDown 2s linear infinite;
+  top: 0;
+  left: 0;
 }
 
 .imageItem img {
   width: 100px;
 }
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 15px;
+  }
+}
+.expand {
+  animation: TextExpand 1s infinite;
+}
+@keyframes TextExpand {
+  0%, 100% {
+    color:white;
+  }
+  25% {
+    color:yellow;
+  }
+  50% {
+    color:red;
+  }
+  75% {
+    color: blue;
+  }
+}
 .orange {
   color: #F87060;
+}
+.container {
+  padding: 5px;
+  position: relative;
+  width: 160px;
+  height: 250px;
 }
