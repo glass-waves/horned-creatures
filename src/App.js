@@ -3,6 +3,7 @@ import creatures from './data.js';
 import React, { Component } from 'react'
 import ImageList from './ImageList';
 import Dropdown from './Dropdown';
+import Header from './Header';
 
 export default class App extends Component {
 
@@ -34,11 +35,10 @@ export default class App extends Component {
       if(creature2.horns == this.state.filter2) return true;
       return false;
     })
-    console.log(filteredList);
 
-console.log(this.state)
     return (
-      <div>
+      <div className="mainDiv">
+        <Header />
         <form>
 
           <Dropdown 
